@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/app/styles/styles.css">
+    <title>API</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="panel-heading">
+                <h3>Pesquisa de geolocalização</h3>
+            </div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="ip">Digite um endereço IP:</label>
+                        <input type="text" name="ip" id="ip">
+                    </div>
+                    <input class="btn" type="button" value="Procurar" onclick="consultarIp()">
+                </form>
+            </div>
+        </div>
+
+        <div class="res">
+            <div class="panel-heading">
+                <h3>Informações IP</h3>
+            </div>
+
+            <div class="panel-body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Endereço IP</td>
+                            <td id="ip"></td>
+                        </tr>
+                        <tr>
+                            <td>País</td>
+                            <td id="country_name"></td>
+                        </tr>
+                        <tr>
+                            <td>Região</td>
+                            <td id="region_name"></td>
+                        </tr>
+                        <tr>
+                            <td>Cidade</td>
+                            <td id="city"></td>
+                        </tr>
+                        <tr>
+                            <td>CEP ou Código postal</td>
+                            <td id="zip"></td>
+                        </tr>
+                        <tr>
+                            <td>Latitude</td>
+                            <td id="latitude"></td>
+                        </tr>
+                        <tr>
+                            <td>Longitude</td>
+                            <td id="longitude"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>

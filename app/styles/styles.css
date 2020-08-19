@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+}
+
+body {
+    background: #ffffff;
+}
+
+.container {   
+    padding-top: 70px;
+    width: 400px;
+    margin: auto;
+    font: 500 10pt Arial;
+}
+
+.header {
+    border: solid 1px rgb(0, 162, 255);
+}
+
+/* header das div */
+.panel-heading {
+    background: rgb(0, 162, 255);
+    color: white;
+    padding: 10px;
+}
+
+/* header form */
+.header .panel-body form .form-group {
+    margin: 10px 0;
+}
+
+.header .panel-body label {
+    color: #333333;
+   /*  padding-left: 15px; */
+    padding: 5px 15px;
+    display: block;
+    font: bold 10pt Arial;
+}
+
+.header .panel-body .form-group input {
+    background: white;
+    width: 90%;
+    height: 28px;
+    padding-left: 10px;
+    margin: auto;
+    display: block;
+    border: solid 1px rgb(197, 197, 197);
+    font: 500 11pt Arial;
+    outline: 0;
+}
+
+.header .panel-body .form-group input:focus {
+    background: white;
+    border: solid 1px rgba(110, 110, 110, 0.550);
+    box-shadow: 0px 0px 5px 0.50px rgba(149, 149, 149, 0.40);
+}
+
+.header .panel-body .btn {
+    background: rgb(0, 162, 255);
+    color: white;
+    width: 80px;
+    height: 28px;
+    margin: 5px 0px 17px 14px;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+}
+
+.header .panel-body .btn:hover {
+    background:rgb(0, 131, 207);
+}
+
+/* Tabela */
+.res {
+    padding-top: 20px;
+}
+
+.res .panel-body {
+    border: solid 1px rgb(0, 162, 255);
+    padding-top: 15px;
+}
+
+.panel-body table {
+    width: 92%;
+    margin: 15px;
+    table-layout: fixed;
+    border-collapse: collapse; /* Remover espaçamento entre as células*/
+    font: 500 11pt Arial;
+}
+
+.panel-body tbody tr:nth-child(odd) { /* Aplicar efeito zebra (even = par, odd = impar) */
+    background: rgba(246, 246, 246);
+    border-top: solid 1px rgb(218, 218, 218);
+    border-bottom: solid 1px rgb(218, 218, 218);
+}
+
+.panel-body tbody td {
+    padding: 10px;
+}
+
