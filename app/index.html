@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/app/styles/styles.css">
-    <title>API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <title>Geolocalização IP</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="panel-heading">
-                <h3>Pesquisa de geolocalização</h3>
+                <p>Pesquisa de geolocalização</p>
             </div>
             <div class="panel-body">
                 <form>
                     <div class="form-group">
                         <label for="ip">Digite um endereço IP:</label>
-                        <input type="text" name="ip" id="ip">
+                        <input type="text" name="ip" class="ip">
                     </div>
-                    <input class="btn" type="button" value="Procurar" onclick="consultarIp()">
+                    <input class="btn" type="button" value="Procurar" onclick="consultIp()">
                 </form>
             </div>
         </div>
 
         <div class="res">
             <div class="panel-heading">
-                <h3>Informações IP</h3>
+                <p>Informações IP</p>
             </div>
-
             <div class="panel-body">
                 <table>
                     <tbody>

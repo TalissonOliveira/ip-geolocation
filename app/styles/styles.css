@@ -6,13 +6,14 @@
 
 body {
     background: #ffffff;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {   
     padding-top: 70px;
     width: 400px;
     margin: auto;
-    font: 500 10pt Arial;
+    font: 300 10pt Roboto;
 }
 
 .header {
@@ -24,6 +25,7 @@ body {
     background: rgb(0, 162, 255);
     color: white;
     padding: 10px;
+    font: 500 12pt Roboto;
 }
 
 /* header form */
@@ -36,7 +38,7 @@ body {
    /*  padding-left: 15px; */
     padding: 5px 15px;
     display: block;
-    font: bold 10pt Arial;
+    font: 400 10pt Roboto;
 }
 
 .header .panel-body .form-group input {
@@ -47,7 +49,7 @@ body {
     margin: auto;
     display: block;
     border: solid 1px rgb(197, 197, 197);
-    font: 500 11pt Arial;
+    font: 300 11pt Roboto;
     outline: 0;
 }
 
@@ -87,7 +89,7 @@ body {
     margin: 15px;
     table-layout: fixed;
     border-collapse: collapse; /* Remover espaçamento entre as células*/
-    font: 500 11pt Arial;
+    font: 300 11pt Roboto;
 }
 
 .panel-body tbody tr:nth-child(odd) { /* Aplicar efeito zebra (even = par, odd = impar) */
@@ -99,4 +101,3 @@ body {
 .panel-body tbody td {
     padding: 10px;
 }
-
