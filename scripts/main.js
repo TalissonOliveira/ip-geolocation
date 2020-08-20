@@ -1,6 +1,6 @@
 const showData = (result) => {
     for (let ipData in result) { // Armazenar cada dado do result(data) na variável ipData
-        if (document.querySelector('#'+ipData)) { // Verificar no documento se existe algum id campo(ex: '#' + ip)
+        if (document.querySelector('#'+ipData)) { // Verificar no documento se existe algum id campo (ex: '#' + ip)
             let ipResult = document.querySelector('#'+ipData)
             ipResult.innerHTML = result[ipData] // Mostrar o resultado na tela
         }
