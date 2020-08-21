@@ -9,7 +9,9 @@ const showData = (result) => {
 
 function consultIp() {
     const ip = document.querySelector('.ip')
-    let url = `http://api.ipstack.com/${ip.value}?access_key=129a9ba3864f7b909b587660beb6fc68`
+    const lang = document.querySelector('#lang').value
+    
+    let url = `http://api.ipstack.com/${ip.value}?access_key=129a9ba3864f7b909b587660beb6fc68&language=${lang}`
     
     const options = {
         method: 'GET',
