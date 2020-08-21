@@ -3,6 +3,13 @@ const showData = (result) => {
         if (document.querySelector('#'+ipData)) { // Verificar no documento se existe algum id campo (ex: '#' + ip)
             let ipResult = document.querySelector('#'+ipData)
             ipResult.innerHTML = result[ipData] // Mostrar o resultado na tela
+            
+            if (ipResult == country_name) {
+                let flag = document.createElement('img') // Criar elemento img
+                flag.src = `${result.location.country_flag}` // Adicionar atributo src no img
+                flag.alt = `Bandeira ${result.country_name}`
+                ipResult.appendChild(flag) // Aplicar o elemento img no ipResult(td)
+            }
         }
     }
 }
