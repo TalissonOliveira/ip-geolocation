@@ -1,13 +1,32 @@
-:root {
-    --color-primary: rgb(0, 162, 255);
-    --color-primary-dark: rgb(0, 131, 207);
+﻿/* Classes para tema light e dark */
+.theme-light {
+    --color-primary: #ffffff;
+    --color-secondary: rgb(0, 162, 255);
+    --color-secondary-dark: rgb(0, 131, 207);
     --color-text-primary: rgb(51, 51, 51);
-    --color-text-secondary: rgb(255, 255, 255);
+    --color-text-title: rgb(255, 255, 255);
+    --color-table: rgb(249, 249, 249);
     --color-border: rgb(197, 197, 197);
-    --color-table: rgba(246, 246, 246);
-    --color-border-table: rgb(218, 218, 218);
-    --color-border-dark: rgba(110, 110, 110, 0.550);
+    --color-border-lighter: rgb(218, 218, 218);
     --color-shadow: rgba(149, 149, 149, 0.40);
+    --color-border-darker: rgba(110, 110, 110, 0.550);
+    --color-bg-input: rgba(255, 255, 255, 0.253);
+
+}
+
+.theme-dark {
+    --color-primary: #1c1c33;
+    --color-secondary: rgb(56, 82, 153);
+    --color-secondary-dark: rgb(37, 62, 131);
+    --color-text-primary: rgb(255, 255, 255);
+    --color-text-title: rgb(255, 255, 255);
+    --color-table: rgba(255, 255, 255, 0.020);
+    --color-border: rgba(255, 255, 255, 0.671);
+    --color-border-lighter: rgba(102, 153, 228, 0.250);
+    --color-shadow: rgba(207, 207, 207, 0.3);
+    --color-border-darker: rgb(255, 255, 255);
+    --color-bg-input: rgb(37, 42, 73);
+
 }
 
 * {
@@ -17,8 +36,9 @@
 }
 
 body {
-    background: #ffffff;
+    background: var(--color-primary);
     font-family: 'Roboto', sans-serif;
+    transition: 1s;
 }
 
 .container {   
@@ -29,15 +49,17 @@ body {
 }
 
 .header {
-    border: solid 1px var(--color-primary);
+    border: solid 1px var(--color-secondary);
+    transition: 1s;
 }
 
 /* header das div */
 .panel-heading {
-    background: var(--color-primary);
-    color: var(--color-text-secondary);
+    background: var(--color-secondary);
+    color: var(--color-text-title);
     padding: 10px;
     font: 500 12pt Roboto;
+    transition: 1s;
 }
 
 /* header form */
@@ -50,10 +72,11 @@ body {
     padding: 5px 15px;
     display: block;
     font: 400 10pt Roboto;
+    transition: 1s;
 }
 
 .header .panel-body .form-group input {
-    background: white;
+    background: var(--color-bg-input); /* rgba(68, 61, 99, 0.308) rgba(43, 70, 143, 0.356)*/
     color: var(--color-text-primary);
     width: 90%;
     height: 28px;
@@ -64,20 +87,24 @@ body {
     border: solid 1px var(--color-border);
     font: 300 11pt Roboto;
     outline: 0;
+    transition: 1s;
 }
 
 .header .panel-body .form-group input:focus {
-    border: solid 1px var(--color-border-dark);
+    border: solid 1px var(--color-border-darker);
     box-shadow: 0px 0px 5px 0.50px var(--color-shadow);
+    transition: 0.2s;
 }
 
 .header .panel-body .form-group select {
+    background: var(--color-bg-input);
     color: var(--color-text-primary);
     padding: 6px;
     margin-left: 15px;
     border: solid 1px var(--color-border);
     font: 300 12px Roboto;
     outline: 0;
+    transition: 1s;
 }
 
 .header .panel-body .form-group select option {
@@ -85,18 +112,20 @@ body {
 }
 
 .header .panel-body .btn {
-    background: var(--color-primary);
-    color: var(--color-text-secondary);
+    background: var(--color-secondary);
+    color: var(--color-text-title);
     width: 80px;
     height: 28px;
     margin: 5px 0px 17px 14px;
     border: none;
     cursor: pointer;
     outline: 0;
+    transition: 1s;
 }
 
 .header .panel-body .btn:hover {
-    background: var(--color-primary-dark);
+    background: var(--color-secondary-dark);
+    transition: 0.2s ease-in-out;
 }
 
 /* Tabela */
@@ -105,23 +134,25 @@ body {
 }
 
 .res .panel-body {
-    border: solid 1px var(--color-primary);
+    border: solid 1px var(--color-secondary);
     padding-top: 15px;
+    transition: 1s;
 }
 
 .panel-body table {
-    color: #333333;
+    color: var(--color-text-primary);
     width: 92%;
     margin: 15px;
     table-layout: fixed;
     border-collapse: collapse; /* Remover espaçamento entre as células*/
     font: 300 11pt Roboto;
+    transition: 1s;
 }
 
 .panel-body tbody tr:nth-child(odd) { /* Aplicar efeito zebra (even = par, odd = impar) */
     background: var(--color-table);
-    border-top: solid 1px var(--color-border-table);
-    border-bottom: solid 1px var(--color-border-table);
+    border-top: solid 1px var(--color-border-lighter);
+    border-bottom: solid 1px var(--color-border-lighter); 
 }
 
 .panel-body tbody td {
