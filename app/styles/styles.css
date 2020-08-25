@@ -1,6 +1,10 @@
-﻿/* Classes para tema light e dark */
+﻿:root {
+    --transition: 0.1s linear;
+}
+
+/* Classes para tema light e dark */
 .theme-light {
-    --color-primary: #ffffff;
+    --color-primary: rgb(249, 249, 249);
     --color-secondary: rgb(0, 162, 255);
     --color-secondary-dark: rgb(0, 131, 207);
     --color-text-primary: rgb(51, 51, 51);
@@ -15,7 +19,7 @@
 }
 
 .theme-dark {
-    --color-primary: #1c1c33;
+    --color-primary: #292C35;
     --color-secondary: rgb(56, 82, 153);
     --color-secondary-dark: rgb(37, 62, 131);
     --color-text-primary: rgb(255, 255, 255);
@@ -32,13 +36,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     border-radius: 0px;
 }
 
 body {
     background: var(--color-primary);
     font-family: 'Roboto', sans-serif;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 .container {   
@@ -48,9 +53,51 @@ body {
     font: 300 10pt Roboto;
 }
 
+/* checkbox */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background: rgb(94, 94, 94, 94);
+    width: 50px;
+    height: 26px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 58px;
+    
+}
+
+.ball {
+    background: rgb(255, 255, 255);
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball { /* classe checkbox que tiver checked, elemento label imediatamente após ele, classe ball */
+    transform: translateX(24px);
+}
+
+.fa-moon {
+	color: #ffffff;
+}
+
+.fa-sun {
+	color: #facc00;
+}
+
 .header {
     border: solid 1px var(--color-secondary);
-    transition: 1s;
+    transition: var(--transition);
 }
 
 /* header das div */
@@ -59,7 +106,7 @@ body {
     color: var(--color-text-title);
     padding: 10px;
     font: 500 12pt Roboto;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 /* header form */
@@ -72,7 +119,7 @@ body {
     padding: 5px 15px;
     display: block;
     font: 400 10pt Roboto;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 .header .panel-body .form-group input {
@@ -87,7 +134,7 @@ body {
     border: solid 1px var(--color-border);
     font: 300 11pt Roboto;
     outline: 0;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 .header .panel-body .form-group input:focus {
@@ -104,7 +151,7 @@ body {
     border: solid 1px var(--color-border);
     font: 300 12px Roboto;
     outline: 0;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 .header .panel-body .form-group select option {
@@ -120,7 +167,7 @@ body {
     border: none;
     cursor: pointer;
     outline: 0;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 .header .panel-body .btn:hover {
@@ -136,7 +183,7 @@ body {
 .res .panel-body {
     border: solid 1px var(--color-secondary);
     padding-top: 15px;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 .panel-body table {
@@ -146,7 +193,7 @@ body {
     table-layout: fixed;
     border-collapse: collapse; /* Remover espaçamento entre as células*/
     font: 300 11pt Roboto;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 .panel-body tbody tr:nth-child(odd) { /* Aplicar efeito zebra (even = par, odd = impar) */

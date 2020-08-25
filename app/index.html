@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="/app/styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+
     <title>Geolocalização IP</title>
 </head>
 <body>
     <div class="container">
-        <button onclick="toggleTheme()">Switch</button>
+        <div>
+            <input type="checkbox" class="checkbox" id="checkbox" onclick="toggleTheme()">
+            <label for="checkbox" class="label">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i> 
+                <div class="ball"></div>
+                
+            </label>
+        </div>
+       
         <div class="header">
             <div class="panel-heading">
                 <p>Pesquisa de geolocalização</p>
