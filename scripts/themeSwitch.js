@@ -6,7 +6,6 @@ function setTheme (themeName) {
 
 // Function para trocar entre tema light e dark
 function toggleTheme() {
-console.log('cliquei')
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-light')
     } else {
@@ -14,10 +13,11 @@ console.log('cliquei')
     }
 }
 
-// Function para definir o tema no carregamento inicial
+// Function auto executável (IIFE) para definir o tema no carregamento inicial
 (function () {
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-dark')
+        document.querySelector('#checkbox').checked = true
     } else {
         setTheme('theme-light')
     }
