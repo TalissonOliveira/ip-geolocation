@@ -78,6 +78,7 @@ body {
     position: relative;
     border-radius: 58px;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .ball {
@@ -158,6 +159,7 @@ body {
     margin-left: 15px;
     border: solid 1px var(--color-border);
     font: 300 12px Roboto;
+    cursor: pointer;
     outline: 0;
     transition: var(--transition);
 }
