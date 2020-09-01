@@ -8,10 +8,17 @@
 
 ## :rocket: Tecnologias
 
-A aplicação foi desenvolvida utilizando JavaScript puro com o uso da [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+A aplicação foi desenvolvida utilizando JavaScript puro com o uso da [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
-### Utilitários
+#### Utilitários
 
-- API: [ipstack](https://ipstack.com/)
+- API de geolocalização: [ipstack](https://ipstack.com/)
 
 ---
+## :memo: Licença
+
+Este projeto esta sobe a licença MIT. Consulte a [LICENÇA](https://github.com/TalissonOliveira/ip-geolocation/blob/master/LICENSE) para obter mais informações.
+
+---
+
+Feito com :heart: por Talisson Oliveira
